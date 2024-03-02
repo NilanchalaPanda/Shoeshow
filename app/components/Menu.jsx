@@ -11,10 +11,20 @@ const Menu = ({ showCatMenu, setShowCatMenu }) => {
   ];
 
   const subMenuData = [
-    { id: 1, name: "Jordan", doc_count: 11 },
-    { id: 2, name: "Sneakers", doc_count: 8 },
-    { id: 3, name: "Running shoes", doc_count: 64 },
-    { id: 4, name: "Football shoes", doc_count: 107 },
+    { id: 1, name: "Jordan", url: "category/jordan", doc_count: 11 },
+    { id: 2, name: "Sneakers", url: "category/sneakers", doc_count: 8 },
+    {
+      id: 3,
+      name: "Running shoes",
+      url: "category/running-shoes",
+      doc_count: 64,
+    },
+    {
+      id: 4,
+      name: "Football shoes",
+      url: "category/football-shoes",
+      doc_count: 107,
+    },
   ];
 
   return (
@@ -35,8 +45,12 @@ const Menu = ({ showCatMenu, setShowCatMenu }) => {
                 {showCatMenu && (
                   <ul className="bg-white absolute top-6 left-0 min-w-[250px] p-1 shadow-2xl rounded-xl">
                     {subMenuData.map((subMenu) => (
-                      <Link href={"/"} key={subMenu.id} className=" flex items-center justify-between px-4 gap-2 rounded-xl hover:bg-black/[0.03]">
-                        <li  className="h-12 flex items-center rounded-xl">
+                      <Link
+                        href={"/" + subMenu.url}
+                        key={subMenu.id}
+                        className=" flex items-center justify-between px-4 gap-2 rounded-xl hover:bg-black/[0.03]"
+                      >
+                        <li className="h-12 flex items-center rounded-xl">
                           {subMenu.name}
                         </li>
                         <span className="opacity-50 text-sm">

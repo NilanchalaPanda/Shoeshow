@@ -6,7 +6,7 @@ import React from "react";
 const ProductCard = () => {
   return (
     <Link
-      href="/product/1"
+      href="/category/sneakers/34"
       className="transform overflow-hidden bg-white duration-200 hover:scale-[1.03] cursor-pointer"
     >
       <img src="/product.jpg" alt="SHOE IMAGE" className="rounded-xl"/>

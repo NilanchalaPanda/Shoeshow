@@ -11,10 +11,20 @@ const MobileMenu = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
   ];
 
   const subMenuData = [
-    { id: 1, name: "Jordan", doc_count: 11 },
-    { id: 2, name: "Sneakers", doc_count: 8 },
-    { id: 3, name: "Running shoes", doc_count: 64 },
-    { id: 4, name: "Football shoes", doc_count: 107 },
+    { id: 1, name: "Jordan", url: "category/jordan", doc_count: 11 },
+    { id: 2, name: "Sneakers", url: "category/sneakers", doc_count: 8 },
+    {
+      id: 3,
+      name: "Running shoes",
+      url: "category/running-shoes",
+      doc_count: 64,
+    },
+    {
+      id: 4,
+      name: "Football shoes",
+      url: "category/football-shoes",
+      doc_count: 107,
+    },
   ];
 
   return (
@@ -36,7 +46,7 @@ const MobileMenu = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
                   <ul className="bg-black/[0.05] my-5 rounded-xl mx-3">
                     {subMenuData.map((subMenu) => (
                       <Link
-                        href={"/"}
+                        href={"/" + subMenu.url}
                         onClick={() => {
                           setShowCatMenu(false);
                           setMobileMenu(false);
