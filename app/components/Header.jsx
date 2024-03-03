@@ -41,7 +41,9 @@ const Header = () => {
         <div className="flex items-center gap-2 text-black">
           {/* ICON START */}
           <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
-            <IoMdHeartEmpty className="text-[20px] md:text-[24px]" />
+            <Link href={"/wishlist"}>
+              <IoMdHeartEmpty className="text-[20px] md:text-[24px]" />
+            </Link>
             <div className="text-[15px] md:text-[20px]" />
             <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-500 absolute top-1 left-5 md:left-7 text-[8px] md:text-[11px] flex justify-center items-center text-white font-light px-[3px] md:px-[5px]">
               4
@@ -51,7 +53,9 @@ const Header = () => {
 
           {/* ICON START */}
           <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
-            <BsCart className="text-[18px] md:text-[24px]" />
+            <Link href={"/cart"}>
+              <BsCart className="text-[18px] md:text-[24px]" />
+            </Link>
             <div className="h-[16px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-500 absolute top-1 left-5 md:left-7 text-[8px] md:text-[11px] flex justify-center items-center text-white font-light px-[3px] md:px-[5px]">
               5
             </div>
