@@ -122,9 +122,8 @@ const page = () => {
             </div>
           </div>
           {/* RIGHT END */}
-
-          <RelatedProducts />
         </div>
+        <RelatedProducts />
       </Wrapper>
     </div>
   );
